@@ -87,9 +87,9 @@ class Camera {
     cv::Mat drawing(canny_output.size(), CV_8UC3, cv::Scalar(255,255,255));
     
     for( int i = 0; i<contours.size(); i++ ) {
-    cv::Scalar color = cv::Scalar(167,151,0); // B G R values
-    cv::drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, cv::Point());
-    cv::circle( drawing, mc[i], 4, color, -1, 8, 0 );
+      cv::Scalar color = cv::Scalar(167,151,0); // B G R values
+      cv::drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, cv::Point());
+      cv::circle( drawing, mc[i], 4, color, -1, 8, 0 );
     }
 
     //get box location in 2d image
